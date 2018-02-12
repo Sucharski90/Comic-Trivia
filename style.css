@@ -1,0 +1,59 @@
+body {
+  height: 100%;
+  background-color: black;
+}
+
+h1 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-family: monospace;
+  color: cadetblue;
+}
+
+.score {
+  display: grid;
+  align-items: end;
+  justify-content: end;
+  color: limegreen;
+  font-size: 30px;
+}
+
+.container {
+  height: 200px;
+  width: 100%;
+  position: absolute;
+}
+
+#question {
+  height: 120px;
+  width: 95%;
+  font-size: 30px;
+  color: white;
+
+}
+
+.answer {
+  height: 130px;
+  width: 80%;
+  font-size: 30px;
+  color: red;
+}
+
+.answer:hover {
+  color: white;
+}
+
+#reset {
+  background-color: white;
+  font-size: 35px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+#reset:hover{
+  background-color: yellow;
+
+}
