@@ -116,6 +116,11 @@ let answer = document.querySelector('.answers');
         total.innerHTML = `Score: ${newScore}`
       }
    console.log(score)
+   console.log(index)
    nextQuestion()
  })
  
+if (score === 2) {
+    alert("working")
+} 
+
