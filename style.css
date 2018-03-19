@@ -33,7 +33,7 @@ h1 {
     position: absolute;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 50px 60px 60px;
+    grid-template-rows: auto;
 }
 
 #question {
@@ -44,8 +44,8 @@ h1 {
 }
 
 .answers {
-  height: 130px;
-  width: 80%;
+  height: auto;
+  width: 100%;
   font-size: 30px;
   color: #42a4de;
   font-family: 'Oswald', sans-serif;
@@ -55,7 +55,9 @@ h1 {
   color: white;
 }
 
-
+button {
+  width: 50px;
+}
 
 @media(max-width:568px){
   body {

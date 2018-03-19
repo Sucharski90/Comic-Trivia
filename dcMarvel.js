@@ -93,13 +93,20 @@ const nextQuestion = () => {
 }
 //reset quiz
 const resetQuiz = () => {
-  score = 0;
   index = 0;
-  console.log(score);
+  score = 0;
+  total.innerHTML = 0;
+  console.log(total.innerHTML);
+  
   renderQuestion();
 }
+
+
 let reset = document.querySelector('#reset');
 reset.addEventListener('click', event => resetQuiz())
+
+let total = document.querySelector('.score')
+    total.innerHTML = `Score: ${score}`
 
 let answer = document.querySelector('.answers');
     answer.addEventListener('click', event => {
@@ -111,5 +118,4 @@ let answer = document.querySelector('.answers');
    console.log(score)
    nextQuestion()
  })
- let total = document.querySelector('.score')
-    total.innerHTML = `Score: ${score}`
+ 
