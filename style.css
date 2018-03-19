@@ -4,7 +4,7 @@ body {
   left: 0;
   right: 0;
   display: block;
-  background-image: url("Images/Batman.jpg");
+  background-image: url("images/Batman.jpg");
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
