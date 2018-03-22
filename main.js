@@ -106,14 +106,14 @@ let reset = document.querySelector('#reset');
 reset.addEventListener('click', event => resetQuiz())
 
 let total = document.querySelector('.score')
-    total.innerHTML = `Score: ${score}/ 10`
+    total.innerHTML = `Score: ${score}/10`
 
 let answer = document.querySelector('.answers');
     answer.addEventListener('click', event => {
       if (event.target.innerHTML == questions[index].correctAnswer) {
         let newScore = score += 1
         let total = document.querySelector(".score")
-        total.innerHTML = `Score: ${newScore}/ 10`
+        total.innerHTML = `Score: ${newScore}/10`
       }
    console.log(score)
    console.log(index)
