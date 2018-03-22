@@ -120,7 +120,5 @@ let answer = document.querySelector('.answers');
    nextQuestion()
  })
  
-if (score === 2) {
-    alert("working")
-} 
+ 
 
