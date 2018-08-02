@@ -38,7 +38,7 @@ h1 {
 
 #question {
   font-size: 40px;
-  color: white;
+  color: rgba(48, 233, 171, 0.753);
   font-family: 'Oswald', sans-serif;
 
 }
@@ -56,9 +56,58 @@ h1 {
 }
 
 button {
-  width: 50px;
+  width: 30%;
+  font-size: 20px;
+  margin-top: 30px;
+  background-color: red;
+  color: white;
+}
+button:hover {
+  font-size: 30px;
 }
 
+.modal {
+  display:none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  margin: 20% auto;
+  width: 70%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  animation-name: modalopen;
+  animation-duration: 1.3s;
+} 
+.modal-header h2, .modal-footer h3 {
+  margin: 0;
+}
+.modal-header {
+  background: rgb(25, 102, 48);
+  padding: 15px;
+  color: white;
+}
+.modal-body {
+  padding: 10px 20px;
+}
+.modal-footer {
+  background: rgb(25, 102, 48);
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+.closeBtn {
+  color: white;
+  float: right;
+  font-size: 30px;
+}
 /*
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops

@@ -74,7 +74,16 @@ const questions = [
     c: "Lobo killed them all so he can be unique",
     correctAnswer: 'Lobo killed them all so he can be unique',
   },
+  {
+    question: " Why is Lobo the last Czarnian?",
+    a: "They all died when the planet exploded",
+    b: "They are an ancient race long gone",
+    c: "Lobo killed them all so he can be unique",
+    correctAnswer: 'Lobo killed them all so he can be unique',
+  },
 ];
+
+// render current question and answer options to screen
 const renderQuestion = () => {
   let currentQuestion = questions[index];
   let q = document.querySelector('#question');
@@ -85,7 +94,9 @@ const renderQuestion = () => {
   a.innerHTML = currentQuestion.a;
   b.innerHTML = currentQuestion.b;
   c.innerHTML = currentQuestion.c;
+  openModal();
 }
+//moves to next question
 renderQuestion();
 const nextQuestion = () => {
   index++;
@@ -97,17 +108,19 @@ const resetQuiz = () => {
   score = 0;
   total.innerHTML = 0;
   console.log(total.innerHTML);
-  
   renderQuestion();
 }
 
 
+// reset game back to first question
 let reset = document.querySelector('#reset');
 reset.addEventListener('click', event => resetQuiz())
 
+//displays current score
 let total = document.querySelector('.score')
     total.innerHTML = `Score: ${score}/10`
 
+//moves on to next question when an answer is clicked and adds to score
 let answer = document.querySelector('.answers');
     answer.addEventListener('click', event => {
       if (event.target.innerHTML == questions[index].correctAnswer) {
@@ -115,10 +128,26 @@ let answer = document.querySelector('.answers');
         let total = document.querySelector(".score")
         total.innerHTML = `Score: ${newScore}/10`
       }
-   console.log(score)
-   console.log(index)
    nextQuestion()
  })
  
- 
 
+ let modal = document.querySelector('.modal');
+ let closeBtn = document.querySelector('.closeBtn');
+
+function openModal() {
+    if(questions[index] == questions[10])
+        modal.style.display = 'block';
+        let displayScore = document.querySelector(".score").innerHTML
+        document.querySelector("#current-node").innerHTML = `You scored ${displayScore} click reset to play again!`;
+};
+function closeModal() {
+  modal.style.display = 'none';
+}
+function outsideClick(e) {
+  if(e.target == modal) {
+  modal.style.display = 'none';
+  }
+}
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', outsideClick);
