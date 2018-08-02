@@ -139,7 +139,7 @@ function openModal() {
     if(questions[index] == questions[10])
         modal.style.display = 'block';
         let displayScore = document.querySelector(".score").innerHTML
-        document.querySelector("#current-node").innerHTML = `You scored ${displayScore} click reset to play again!`;
+        document.querySelector("#current-node").innerHTML = `${displayScore} click reset to play again!`;
 };
 function closeModal() {
   modal.style.display = 'none';
